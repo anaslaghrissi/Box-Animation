@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #0f222f;
+}
+ul {
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: 0.5s;
+  cursor: pointer;
+}
+ul:hover {
+  gap: 10px;
+}
+ul li {
+  position: relative;
+  list-style: none;
+  width: 450px;
+  height: 100px;
+  padding: 15px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: 0.5s;
+  box-shadow: 0 -15px 25px rgba(0, 0, 0, 0.25);
+}
+ul li .box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #aaa;
+  gap: 20px;
+  transition: 0.5s;
+}
+.box img {
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+}
+ul li:hover .box {
+  transform: translateX(-50px);
+}
+li h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+li p {
+  font-size: 12px;
+}
+li:hover h4,
+li:hover p {
+  color: #fff;
+}
+li:nth-child(1) {
+  transform: rotate(-15deg) translate(-20px, -20px);
+}
+li:nth-child(2) {
+  transform: rotate(10deg) translate(10px, -10px);
+}
+li:nth-child(3) {
+  transform: rotate(-8deg);
+}
+li:nth-child(4) {
+  transform: rotate(5deg) translate(10px, -20px) translateY(30px);
+}
+ul:hover li {
+  transform: rotate(0deg);
+}
